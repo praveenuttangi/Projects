@@ -18,6 +18,7 @@ Various machine learning algorithms, including Logistic Regression, Naive Bayes,
 This project aims to detect credit card fraud using machine learning models, including XGBoost, CatBoost, and Random Forest. 
 The primary focus is on achieving 100% detection of fraudulent transactions while minimizing false positives.
 
+
 ## Project Highlights
 * Developed a machine learning model for credit card fraud detection.
 * Implemented XGBoost, CatBoost, and Random Forest algorithms for comparative analysis.
