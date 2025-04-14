@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biomedical Literature Insight Agent</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        form {
+            display: flex;
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 12px 15px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px 0 0 6px;
+            outline: none;
+        }
+
+        button {
+            background-color: #1677ff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 0 6px 6px 0;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+
+        button:hover {
+            background-color: #0f5fe0;
+        }
+
+        .results {
+            width: 100%;
+            max-width: 750px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+            white-space: pre-wrap;
+        }
+
+        .icon {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧬 Biomedical Literature Insight Agent</h1>
+    <p>Enter a biomedical topic to analyze recent literature using AI</p>
+
+    <form method="POST">
+        <input type="text" name="topic" placeholder="e.g. lung cancer, breast cancer" required>
+        <button type="submit"><span class="icon">🔍</span> Run Agent</button>
+    </form>
+
+    {% if result %}
+    <div class="results">
+        {{ result|safe }}
+    </div>
+    {% endif %}
+</body>
+</html>
